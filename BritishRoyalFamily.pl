@@ -6,7 +6,7 @@ male("Prince Andrew").
 male("Prince Edward").
 male("Prince William").
 male("Prince Harry").
-male("Perter Phillips").
+male("Peter Phillips").
 male("Mike Tindall").
 male("Prince George").
 male("James, Viscount Severn").
@@ -116,3 +116,14 @@ grandmother(GM, GC) :-
 grandfather(GF, GC) :-
     grandparent(GF, GC),
     male(GF).
+
+grandchild(GC, GP) :-
+    grandparent(GP, GC).
+
+grandson(GS, GP) :-
+    grandchild(GS, GP),
+    male(GS).
+
+granddaughter(GD, GP) :-
+    grandchild(GD, GP),
+    female(GD).
