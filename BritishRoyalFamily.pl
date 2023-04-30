@@ -87,9 +87,12 @@ wife(Person, Husband) :-
     husband(Husband, Person).
 
 father(Parent, Child) :-
-    male(Parent),
-    parent(Parent, Child).
+    parent(Parent, Child),
+    male(Parent).
 
 mother(Parent, Child) :-
-    female(Parent),
+    parent(Parent, Child),
+    female(Parent).
+
+child(Child, Parent) :-
     parent(Parent, Child).
