@@ -104,3 +104,15 @@ son(Child, Parent) :-
 daughter(Child, Parent) :-
     child(Child, Parent),
     female(Child).
+
+grandparent(GP, GC) :-
+    parent(GP, Parent),
+    parent(Parent, GC).
+
+grandmother(GM, GC) :-
+    grandparent(GM, GC),
+    female(GM).
+
+grandfather(GF, GC) :-
+    grandparent(GF, GC),
+    male(GF).
