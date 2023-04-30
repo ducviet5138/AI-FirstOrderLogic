@@ -73,3 +73,16 @@ parent("Peter Phillips", "Savannah Phillips").
 parent("Peter Phillips", "Isla Phillips").
 parent("Zara Phillips", "Mia Grace Tindall").
 parent("Mike Tindall", "Mia Grace Tindall").
+parent(X, Y).
+
+disvorced("Princess Diana", "Prince Charles").
+disvorced("Captain Mark Phillips", "Princess Anne").
+disvorced("Sarah Ferguson", "Prince Andrew").
+
+husband(Person, Wife) :-
+    male(Person),
+    female(Wife),
+    married(Person, Wife); married(Wife, Person).
+
+wife(Person, Husband) :-
+    husband(Husband, Person).
