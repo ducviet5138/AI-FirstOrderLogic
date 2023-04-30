@@ -96,3 +96,11 @@ mother(Parent, Child) :-
 
 child(Child, Parent) :-
     parent(Parent, Child).
+
+son(Child, Parent) :-
+    child(Child, Parent),
+    male(Child).
+
+daughter(Child, Parent) :-
+    child(Child, Parent),
+    female(Child).
