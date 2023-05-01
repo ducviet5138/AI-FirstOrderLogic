@@ -127,3 +127,34 @@ grandson(GS, GP) :-
 granddaughter(GD, GP) :-
     grandchild(GD, GP),
     female(GD).
+
+sibling(Person1, Person2) :-
+    parent(Parent, Person1),
+    parent(Parent, Person2),
+    Person1 \= Person2.
+
+brother(Person, Sibling) :-
+    sibling(Person, Sibling),
+    male(Person).
+
+sister(Person, Sibling) :-
+    sibling(Person, Sibling),
+    female(Person).
+
+aunt(Person, NieceNephew) :-
+    sister(Person, Parent),
+    parent(Parent, NieceNephew).
+
+uncle(Person, NieceNephew) :-
+    brother(Person, Parent),
+    parent(Parent, NieceNephew).
+
+niece(Person, AuntUncle) :-
+    female(Person),
+    parent(Parent, Person),
+    sibling(Parent, AuntUncle).
+
+nephew(Person, AuntUncle) :-
+    male(Person),
+    parent(Parent, Person),
+    sibling(Parent, AuntUncle).
