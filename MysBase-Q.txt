@@ -46,9 +46,9 @@ grandmother(X,"Kushina").
 16. Who is granddaughter of Bsura?
 granddaughter(X,"Bsura").
 
-17. Who is the grandchild of Outra?
-grandchild(X,"Outra").
-grandmother("Outra",X).
+17. Who is the grandchild of Outdra?
+grandchild(X,"Outdra").
+grandmother("Outdra",X).
 
 18. Is Naruto sibling of Itachi?
 sibling("Naruto","Itachi").

@@ -13,7 +13,7 @@ male("Boruto").
 
 
 female("Ozawa").
-female("Outra").
+female("Outdra").
 female("Bsura").
 female("Tanara").
 female("Mikoto").
@@ -30,8 +30,8 @@ parent("Ozawa", "Indra").
 parent("Ozawa", "Asura").
 parent("Indra", "Tajima").
 parent("Indra", "Fugaku").
-parent("Outra", "Tajima").
-parent("Outra", "Fugaku").
+parent("Outdra", "Tajima").
+parent("Outdra", "Fugaku").
 parent("Tajima", "Madara").
 parent("Tajima", "Izuna").
 parent("Tanara", "Madara").
@@ -53,7 +53,7 @@ parent("Hinata", "Himawari").
 
 
 married("Hagoromo", "Ozawa").
-married("Indra", "Outra").
+married("Indra", "Outdra").
 married("Tajima", "Tanara").
 married("Fugaku", "Mikoto").
 married("Sasuke", "Sakura").
