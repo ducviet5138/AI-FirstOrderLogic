@@ -1,0 +1,62 @@
+1. Who is Prince Andrew’s mother?
+mother(X, "Prince Andrew").
+
+2. Was Queen Elizabeth the wife of Mia Grace Tindall?
+wife("Queen Elizabeth II", "Mia Grace Tindall").
+
+3. List all married couples.
+married(X, Y).
+
+4. List all disvorced couples.
+divorced(X, Y).
+
+5. List grandchildren of Prince Philip.
+grandchild(X, "Prince Philip").
+
+6. Who is the grandparent of Princess Charlotte?
+grandparent(X, "Princess Charlotte").
+granddaughter("Princess Charlotte", X).
+grandchild("Princess Charlotte", X).
+
+7. Who is the sister of Prince Harry?
+sister(X, "Prince Harry").
+
+8. Who is the sister of Princess Beatrice?
+sister(X, "Princess Beatrice").
+
+9. Who is the brother of Princess Edward?
+brother(X, "Princess Edward").
+
+10. who is the uncle of Prince George?
+uncle(X, "Prince George").
+nephew("Prince George", X).
+
+11. Who is Prince Charles's sibling?
+sibling(X, "Prince Charles").
+
+12. Who is the uncle of Princess Beatrice?
+uncle(X, "Princess Beatrice").
+
+13. Who is son of Prince Phillip?
+son(X, "Prince Philip").
+
+14. Who is the nephew of Prince Andrew?
+nephew(X, "Prince Andrew").
+
+15. Who is the niece of Princess Anne?
+niece(X, "Princess Anne").  
+
+16. Who is the wife of Prince Edward?
+wife(X, "Prince Edward").
+
+17. Who is the grandson of Prince Phillip?
+grandson(X, "Prince Phillip").
+
+18. Who is the child of Prince Phillip?
+child(X, "Prince Phillip").
+
+19. Who is the daughter of Prince Phillip?
+daughter(X, "Prince Phillip").
+
+20. Who is the grandmother of grandmother Mia Grace Tindall?
+grandmother(X, "Mia Grace Tindall").
