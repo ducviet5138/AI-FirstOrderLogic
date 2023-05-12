@@ -61,6 +61,8 @@ married("Naruto", "Hinata").
 married("Minato", "Kushina").
 married("Asura", "Bsura").
 
+hokage("Naruto").
+hokage("Minato").
 
 husband(Person, Wife) :-
     male(Person),
