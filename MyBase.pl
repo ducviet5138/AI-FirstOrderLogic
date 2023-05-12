@@ -41,7 +41,7 @@ parent("Fugaku", "Sasuke").
 parent("Mikoto", "Itachi").
 parent("Mikoto", "Sasuke").
 parent("Sasuke", "Sarada").
-parent("Sakura", "Sarada")
+parent("Sakura", "Sarada").
 parent("Asura", "Kushina").
 parent("Bsura", "Kushina").
 parent("Kushina", "Naruto").
