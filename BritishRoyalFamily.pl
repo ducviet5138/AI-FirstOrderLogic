@@ -31,12 +31,20 @@ female("Mia Grace Tindall").
 
 
 married("Prince Phillip", "Queen Elizabeth II").
+married("Queen Elizabeth II", "Prince Phillip").
 married("Prince Charles", "Camilla Parker Bowles").
+married("Camilla Parker Bowles", "Prince Charles").
 married("Princess Anne", "Timothy Laurence").
+married("Timothy Laurence", "Princess Anne").
 married("Prince Edward", "SophieRhys-jones").
+married("SophieRhys-jones", "Prince Edward").
 married("Prince William", "Kate Middletion").
+married("Kate Middletion", "Prince William").
 married("Autumn Kelly", "Peter Phillips").
+married("Peter Phillips", "Autumn Kelly").
 married("Zara Phillips", "Mike Tindall").
+married("Mike Tindall", "Zara Phillips").
+
 
 
 parent("Queen Elizabeth II", "Prince Charles").
@@ -75,13 +83,16 @@ parent("Zara Phillips", "Mia Grace Tindall").
 parent("Mike Tindall", "Mia Grace Tindall").
 
 disvorced("Princess Diana", "Prince Charles").
+disvorced("Prince Charles", "Princess Diana").
 disvorced("Captain Mark Phillips", "Princess Anne").
+disvorced("Princess Anne", "Captain Mark Phillips").
 disvorced("Sarah Ferguson", "Prince Andrew").
+disvorced("Prince Andrew", "Sarah Ferguson").
 
 husband(Person, Wife) :-
     male(Person),
     female(Wife),
-    married(Person, Wife); married(Wife, Person).
+    married(Person, Wife).
 
 wife(Person, Husband) :-
     husband(Husband, Person).

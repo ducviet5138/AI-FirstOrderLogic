@@ -11,7 +11,6 @@ male("Minato").
 male("Naruto").
 male("Boruto").
 
-
 female("Ozawa").
 female("Outdra").
 female("Bsura").
@@ -53,13 +52,21 @@ parent("Hinata", "Himawari").
 
 
 married("Hagoromo", "Ozawa").
+married("Ozawa", "Hagoromo").
 married("Indra", "Outdra").
+married("Outdra", "Indra").
 married("Tajima", "Tanara").
+married("Tanara", "Tajima").
 married("Fugaku", "Mikoto").
+married("Mikoto", "Fugaku").
 married("Sasuke", "Sakura").
+married("Sakura", "Sasuke").
 married("Naruto", "Hinata").
+married("Hinata", "Naruto").
 married("Minato", "Kushina").
+married("Kushina", "Minato").
 married("Asura", "Bsura").
+married("Bsura", "Asura").
 
 hokage("Naruto").
 hokage("Minato").
@@ -67,7 +74,7 @@ hokage("Minato").
 husband(Person, Wife) :-
     male(Person),
     female(Wife),
-    married(Person, Wife); married(Wife, Person).
+    married(Person, Wife).
 
 wife(Person, Husband) :-
     husband(Husband, Person).
