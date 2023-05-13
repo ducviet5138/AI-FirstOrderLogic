@@ -20,6 +20,9 @@ def Converter():
             
             if (AllFile.find(ListName) == -1):
                 fo.write(ListName + " = list()\n")
+                fo.write("def " + ListName + "f(X):\n")
+                fo.write("    if (X == 0): return " + ListName + "\n")
+                fo.write("    else: return X in " + ListName + "\n")
             
             DataInList = line.split('(')[1].split(')')[0]
             if (DataInList.find(',') != -1):
