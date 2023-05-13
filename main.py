@@ -11,8 +11,8 @@ Converter(filename)
 from PrologPython import *
 
 while (1):
-    query = input("Enter the query (Type 'exit' to exit): ")
-    if (query == "exit"):
+    query = input("Enter the query (Type 'exit.' to exit): ")
+    if (query == "exit."):
         exit()
 
     query = query.replace("(", "f(")
