@@ -1,5 +1,5 @@
 def Converter():
-    fi = open("test.pl", 'r')
+    fi = open("MyBase.pl", 'r')
 
     fo = open("PrologPython.py", 'w')
     fo.write("name = list()\n")
@@ -66,7 +66,8 @@ def Converter():
             fo.write("    " * (len(Parameter) + 2) + "elif (X == i0 and Y == i1): return True\n")
 
             fo.write("    if(len(res) == 0): return False\n")
-            fo.write("    res = list(set(res))\n")
+            fo.write("    for i in range(len(res)):\n")
+            fo.write("         set(res[i])\n")
             fo.write("    return res\n")
             fo = open("PrologPython.py", 'r')
             ######### End Test #########
