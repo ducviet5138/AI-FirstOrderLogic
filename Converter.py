@@ -1,5 +1,5 @@
-def Converter():
-    fi = open("MyBase.pl", 'r')
+def Converter(filename):
+    fi = open(filename, 'r')
 
     fo = open("PrologPython.py", 'w')
     fo.write("name = list()\n")
@@ -98,6 +98,3 @@ def Converter():
                 fo.write(ListName + ".append(" + DataInList + ")\n")
                 fo.write("name" + ".append(" + DataInList + ")\n")
             fo = open("PrologPython.py", 'r')
-
-
-Converter()
