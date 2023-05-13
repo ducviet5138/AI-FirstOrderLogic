@@ -1,6 +1,5 @@
 from Converter import Converter
 import os
-from PrologPython import *
 
 filename = input("Enter the name of the file: ")
 
@@ -9,6 +8,7 @@ if os.path.exists(filename) == 0:
     exit()
 
 Converter(filename)
+from PrologPython import *
 
 while (1):
     query = input("Enter the query (Type 'exit' to exit): ")
