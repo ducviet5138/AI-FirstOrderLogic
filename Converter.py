@@ -12,7 +12,7 @@ def Converter():
 
         if (line.find(":-") != -1):
             print("Found :-")
-            line = fi.readline() # Temporarily skip the next line
+            break
         elif (line != "\n"):
             ListName = line.split('(')[0]
             AllFile = fo.read()
