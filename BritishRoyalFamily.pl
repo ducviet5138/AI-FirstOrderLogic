@@ -89,83 +89,42 @@ disvorced("Princess Anne", "Captain Mark Phillips").
 disvorced("Sarah Ferguson", "Prince Andrew").
 disvorced("Prince Andrew", "Sarah Ferguson").
 
-husband(Person, Wife) :-
-    male(Person),
-    female(Wife),
-    married(Person, Wife).
+husband(Person, Wife) :- male(Person), female(Wife), married(Person, Wife).
 
-wife(Person, Husband) :-
-    husband(Husband, Person).
+wife(Person, Husband) :- husband(Husband, Person).
 
-father(Parent, Child) :-
-    parent(Parent, Child),
-    male(Parent).
+father(Parent, Child) :- parent(Parent, Child), male(Parent).
 
-mother(Parent, Child) :-
-    parent(Parent, Child),
-    female(Parent).
+mother(Parent, Child) :- parent(Parent, Child), female(Parent).
 
-child(Child, Parent) :-
-    parent(Parent, Child).
+child(Child, Parent) :- parent(Parent, Child).
 
-son(Child, Parent) :-
-    child(Child, Parent),
-    male(Child).
+son(Child, Parent) :- child(Child, Parent), male(Child).
 
-daughter(Child, Parent) :-
-    child(Child, Parent),
-    female(Child).
+daughter(Child, Parent) :- child(Child, Parent), female(Child).
 
-grandparent(GP, GC) :-
-    parent(GP, Parent),
-    parent(Parent, GC).
+grandparent(GP, GC) :- parent(GP, Parent), parent(Parent, GC).
 
-grandmother(GM, GC) :-
-    grandparent(GM, GC),
-    female(GM).
+grandmother(GM, GC) :- grandparent(GM, GC), female(GM).
 
-grandfather(GF, GC) :-
-    grandparent(GF, GC),
-    male(GF).
+grandfather(GF, GC) :- grandparent(GF, GC), male(GF).
 
-grandchild(GC, GP) :-
-    grandparent(GP, GC).
+grandchild(GC, GP) :- grandparent(GP, GC).
 
-grandson(GS, GP) :-
-    grandchild(GS, GP),
-    male(GS).
+grandson(GS, GP) :- grandchild(GS, GP), male(GS).
 
-granddaughter(GD, GP) :-
-    grandchild(GD, GP),
-    female(GD).
+granddaughter(GD, GP) :- grandchild(GD, GP), female(GD).
 
-sibling(Person1, Person2) :-
-    parent(Parent, Person1),
-    parent(Parent, Person2),
-    Person1 \= Person2.
+sibling(Person1, Person2) :- parent(Parent, Person1), parent(Parent, Person2), Person1 \= Person2.
 
-brother(Person, Sibling) :-
-    sibling(Person, Sibling),
-    male(Person).
+brother(Person, Sibling) :- sibling(Person, Sibling), male(Person).
 
-sister(Person, Sibling) :-
-    sibling(Person, Sibling),
-    female(Person).
+sister(Person, Sibling) :- sibling(Person, Sibling), female(Person).
 
-aunt(Person, NieceNephew) :-
-    sister(Person, Parent),
-    parent(Parent, NieceNephew).
+aunt(Person, NieceNephew) :- sister(Person, Parent), parent(Parent, NieceNephew).
 
-uncle(Person, NieceNephew) :-
-    brother(Person, Parent),
-    parent(Parent, NieceNephew).
+uncle(Person, NieceNephew) :- brother(Person, Parent), parent(Parent, NieceNephew).
 
-niece(Person, AuntUncle) :-
-    female(Person),
-    parent(Parent, Person),
-    sibling(Parent, AuntUncle).
+niece(Person, AuntUncle) :- female(Person), parent(Parent, Person), sibling(Parent, AuntUncle).
 
-nephew(Person, AuntUncle) :-
-    male(Person),
-    parent(Parent, Person),
-    sibling(Parent, AuntUncle).
+nephew(Person, AuntUncle) :- male(Person), parent(Parent, Person), sibling(Parent, AuntUncle).
