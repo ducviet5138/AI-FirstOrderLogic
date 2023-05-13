@@ -1,5 +1,9 @@
 def Converter():
     fi = open("test.pl", 'r')
+
+    fo = open("PrologPython.py", 'w')
+    fo.write("name = list()\n")
+
     fo = open("PrologPython.py", 'r')
 
     line = "Not Empty String"
@@ -9,8 +13,16 @@ def Converter():
 
         if (not line):
             break
+        
+        removeDuplicate = 0
 
         if (line.find(":-") != -1):
+            if (removeDuplicate == 0):
+                removeDuplicate = 1
+                fo = open("PrologPython.py", 'a')
+                fo.write("name = sorted(set(name))\n")
+                fo = open("PrologPython.py", 'r')
+                
             print("Found :-")
             break
         elif (line != "\n"):
@@ -36,11 +48,11 @@ def Converter():
                     fo.write("    if (X == 0): return " + ListName + "\n")
                     fo.write("    else: return X in " + ListName + "\n")
 
-
             if (DataInList.find(',') != -1):
                 fo.write(ListName + ".append([" + DataInList + "])\n")
             else:
                 fo.write(ListName + ".append(" + DataInList + ")\n")
+                fo.write("name" + ".append(" + DataInList + ")\n")
             fo = open("PrologPython.py", 'r')
 
 
