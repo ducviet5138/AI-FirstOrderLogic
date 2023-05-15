@@ -1,4 +1,4 @@
-own("Nono", "M4A1").
+own("Nono", "M1").
 missile("M1").
 american("West").
 enemy("Nono", america).
