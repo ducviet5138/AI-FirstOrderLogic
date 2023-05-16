@@ -27,7 +27,7 @@ sister(X, "Princess Beatrice").
 9. Who is the brother of Princess Edward?
 brother(X, "Princess Edward").
 
-10. who is the uncle of Prince George?
+10. Who is the uncle of Prince George?
 uncle(X, "Prince George").
 nephew("Prince George", X).
 
