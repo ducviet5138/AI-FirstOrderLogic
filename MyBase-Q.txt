@@ -7,7 +7,7 @@ father(X,"Sarada").
 3. Is Hinata male?
 male("Hinata").
 
-4. who is grandparent of Himawari?
+4. Who is grandparent of Himawari?
 grandparent(X,"Himawari").
 
 5. Who is grandchild of Indra?

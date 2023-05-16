@@ -7,7 +7,7 @@ wife("Queen Elizabeth II", "Mia Grace Tindall").
 3. List all married couples.
 married(X, Y).
 
-4. List all disvorced couples.
+4. List all divorced couples.
 divorced(X, Y).
 
 5. List grandchildren of Prince Philip.
